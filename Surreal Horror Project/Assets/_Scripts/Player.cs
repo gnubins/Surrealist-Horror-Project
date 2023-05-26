@@ -48,6 +48,5 @@ public class Player : MonoBehaviour
                 interactable.Interact();
             }
         }
-
     }
 }

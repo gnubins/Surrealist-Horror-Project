@@ -27,8 +27,8 @@ public class PlayerAnimations : MonoBehaviour
 
     void SwayCamera()
     {
-        Vector3 _vector3 = movement.inputVector;
-        sway.UpdateRotation(new Vector2( _vector3.z, -_vector3.x));
+        Vector3 _vector3 = movement.GetRigibodyVelocity();
+        //sway.UpdateRotation(new Vector2( _vector3.z, -_vector3.x));
     }
 
 }
