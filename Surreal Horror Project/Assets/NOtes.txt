@@ -4,3 +4,8 @@ cut scenes
 
 speach bubbles
 
+
+
+player states 
+cut scene mode 
+explore mode

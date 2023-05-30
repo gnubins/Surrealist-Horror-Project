@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
         {
             if(hit.transform.gameObject.TryGetComponent<IInteractable>(out IInteractable interactable))
             {
-                interactable.Interact();
+                interactable.Interact(transform);
             }
         }
     }
