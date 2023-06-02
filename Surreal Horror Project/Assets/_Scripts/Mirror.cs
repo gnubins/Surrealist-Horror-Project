@@ -4,23 +4,27 @@ using UnityEngine;
 
 public class Mirror : MonoBehaviour
 {
-    Transform playerTransform;
+    Transform player;
+   [SerializeField] Transform mirrorCam;
+
     float rot = 90;
     Vector3 rotToVec;
 
+    bool enableMirror;
 
     void Start()
     {
-        playerTransform = Player.instance.transform;
+        player = Player.instance.transform;
         rotToVec = new Vector3(0, Mathf.Deg2Rad*rot, 0);
-
     }
 
     void LateUpdate()
     {
-        //Vector3 direction = transform.position - playerTransform.position;
-        //Vector3 newDir = new Vector3(direction.x * direction.x, direction.y * direction.y, direction.z * direction.z) ;
-        //transform.rotation = Quaternion.LookRotation(newDir);
-        //Debug.DrawRay(transform.position, transform.forward);
+
+    }
+
+    public void Render()
+    {
+        var m = player.transform.worldToLocalMatrix * transform.worldToLocalMatrix ;  
     }
 }

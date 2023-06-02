@@ -19,10 +19,11 @@ public class Player : MonoBehaviour
     }
     #endregion
 
-    public Transform itemTransform;
+    //public Transform itemTransform;
 
-    [SerializeField]
-    Camera mainCam;
+    [SerializeField] Camera mainCam;
+    [SerializeField] Camera falseCam;
+
     public LayerMask layer;
 
     private void Start()
@@ -48,5 +49,18 @@ public class Player : MonoBehaviour
                 interactable.Interact(transform);
             }
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Hit Something");
+        StartCoroutine(SwitchCameras());
+    }
+
+    IEnumerator SwitchCameras()
+    {
+        falseCam.gameObject.SetActive(false);
+        yield return new WaitForSeconds(.5f);
+        falseCam.gameObject.SetActive(true);
     }
 }
