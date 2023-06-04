@@ -311,6 +311,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e94fa385e13111c4db6399bf7131cc44, type: 3}
+--- !u!95 &284600162 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 5bf3d76cea2a5154f9c318a73964bbe3, type: 3}
+  m_PrefabInstance: {fileID: 716222239}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &284719128 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e94fa385e13111c4db6399bf7131cc44, type: 3}
@@ -1152,6 +1157,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ybot
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 5bf3d76cea2a5154f9c318a73964bbe3, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 79a50f95c03970344886cf68221645e6, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 5bf3d76cea2a5154f9c318a73964bbe3, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bf3d76cea2a5154f9c318a73964bbe3, type: 3}
 --- !u!4 &716222240 stripped
@@ -1297,10 +1310,11 @@ GameObject:
   - component: {fileID: 761468971}
   - component: {fileID: 761468970}
   - component: {fileID: 761468969}
-  - component: {fileID: 761468975}
   - component: {fileID: 761468973}
+  - component: {fileID: 761468975}
   - component: {fileID: 761468974}
   - component: {fileID: 761468976}
+  - component: {fileID: 761468977}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -1447,6 +1461,19 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &761468977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761468968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94a8f2f20ced8844d8aa2fa51358c55b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 284600162}
 --- !u!1 &791079885
 GameObject:
   m_ObjectHideFlags: 0
